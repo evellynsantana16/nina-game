@@ -1,24 +1,23 @@
-const CACHE = "nina-game-v1";
-const FILES = [
-  "./",
-  "./index.html",
-  "./cozinha.html",
-  "./quarto.html",
-  "./banheiro.html",
-  "./loja.html",
-  "./jogo.html",
-  "./assets/css/style.css",
-  "./assets/js/game.js",
-  "./assets/icons/icon.svg",
-  "./manifest.webmanifest"
-];
+// Service Worker de limpeza.
+// Ele não intercepta requisições. Serve apenas para substituir
+// a versão antiga que causava erro com os redirecionamentos da Vercel.
 
-self.addEventListener("install", event => {
-  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES)));
+self.addEventListener("install", () => {
+  self.skipWaiting();
 });
 
-self.addEventListener("fetch", event => {
-  event.respondWith(
-    caches.match(event.request).then(response => response || fetch(event.request))
+self.addEventListener("activate", event => {
+  event.waitUntil(
+    Promise.all([
+      self.registration.unregister(),
+      caches.keys().then(names =>
+        Promise.all(
+          names
+            .filter(name => name.startsWith("nina-game-"))
+            .map(name => caches.delete(name))
+        )
+      ),
+      self.clients.claim()
+    ])
   );
 });
