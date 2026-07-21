@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#ff7ca8">
+    <meta name="description" content="Nina - um jogo virtual em homenagem a uma gatinha preta e branca de olhos verdes.">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+    <title>Loja da Nina</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="loja">
+<div class="app-shell">
+    <header class="topbar">
+        <a class="brand" href="index.html">
+            <span class="brand-paw">🐾</span>
+            <span>
+                <strong>Nina</strong>
+                <small>Meu Gatinho</small>
+            </span>
+        </a>
+        <div class="top-stats">
+            <div class="top-chip">⭐ Nível <span data-level>1</span></div>
+            <div class="top-chip">🪙 <span data-coins>250</span></div>
+        </div>
+    </header>
+
+    <nav class="room-nav" aria-label="Cômodos">
+        <a data-route="inicio" href="index.html">🏠<span>Início</span></a>
+        <a data-route="cozinha" href="cozinha.html">🍽️<span>Cozinha</span></a>
+        <a data-route="quarto" href="quarto.html">🛏️<span>Quarto</span></a>
+        <a data-route="banheiro" href="banheiro.html">🛁<span>Banheiro</span></a>
+        <a data-route="jogo" href="jogo.html">🎮<span>Jogo</span></a>
+        <a data-route="loja" href="loja.html">🛍️<span>Loja</span></a>
+    </nav>
+    <main class="page">
+<section class="room-page shop-page">
+    <div class="room-heading"><div><p>Compras</p><h1>Loja da Nina</h1></div><a href="index.html" class="back-link">← Voltar para Nina</a></div>
+    <div class="shop-intro"><div><h2>Itens fofos para deixar a Nina feliz</h2><p>As compras ficam salvas neste aparelho.</p></div><div class="wallet">🪙 <span data-coins>250</span></div></div>
+    <div class="shop-grid large">
+        <button class="item-card buy-item" data-item="Laço rosa" data-price="80"><span>🎀</span><b>Laço rosa</b><small>80 moedas</small></button>
+        <button class="item-card buy-item" data-item="Coroa" data-price="150"><span>👑</span><b>Coroa</b><small>150 moedas</small></button>
+        <button class="item-card buy-item" data-item="Novelo azul" data-price="65"><span>🧶</span><b>Novelo azul</b><small>65 moedas</small></button>
+        <button class="item-card buy-item" data-item="Cama nuvem" data-price="220"><span>☁️</span><b>Cama nuvem</b><small>220 moedas</small></button>
+        <button class="item-card buy-item" data-item="Ratinho de brinquedo" data-price="95"><span>🐭</span><b>Ratinho</b><small>95 moedas</small></button>
+        <button class="item-card buy-item" data-item="Óculos coração" data-price="130"><span>💗</span><b>Óculos coração</b><small>130 moedas</small></button>
+    </div>
+    <section class="owned-section"><h2>Meus itens</h2><div id="ownedItems" class="owned-list"></div></section>
+</section>    </main>
+</div>
+
+<nav class="mobile-tabs" aria-label="Navegação móvel">
+    <a data-route="inicio" href="index.html">🏠<span>Início</span></a>
+    <a data-route="cozinha" href="cozinha.html">🍽️<span>Cozinha</span></a>
+    <a data-route="quarto" href="quarto.html">🛏️<span>Quarto</span></a>
+    <a data-route="banheiro" href="banheiro.html">🛁<span>Banho</span></a>
+    <a data-route="jogo" href="jogo.html">🎮<span>Jogo</span></a>
+    <a data-route="loja" href="loja.html">🛍️<span>Loja</span></a>
+</nav>
+
+<div id="toast" class="toast" aria-live="polite"></div>
+<script src="assets/js/game.js"></script>
+</body>
+</html>

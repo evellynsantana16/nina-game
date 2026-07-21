@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#ff7ca8">
+    <meta name="description" content="Nina - um jogo virtual em homenagem a uma gatinha preta e branca de olhos verdes.">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+    <title>Nina - Meu Gatinho</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="inicio">
+<div class="app-shell">
+    <header class="topbar">
+        <a class="brand" href="index.html">
+            <span class="brand-paw">🐾</span>
+            <span>
+                <strong>Nina</strong>
+                <small>Meu Gatinho</small>
+            </span>
+        </a>
+        <div class="top-stats">
+            <div class="top-chip">⭐ Nível <span data-level>1</span></div>
+            <div class="top-chip">🪙 <span data-coins>250</span></div>
+        </div>
+    </header>
+
+    <nav class="room-nav" aria-label="Cômodos">
+        <a data-route="inicio" href="index.html">🏠<span>Início</span></a>
+        <a data-route="cozinha" href="cozinha.html">🍽️<span>Cozinha</span></a>
+        <a data-route="quarto" href="quarto.html">🛏️<span>Quarto</span></a>
+        <a data-route="banheiro" href="banheiro.html">🛁<span>Banheiro</span></a>
+        <a data-route="jogo" href="jogo.html">🎮<span>Jogo</span></a>
+        <a data-route="loja" href="loja.html">🛍️<span>Loja</span></a>
+    </nav>
+    <main class="page">
+<section class="game-grid">
+    <div class="scene living-room">
+        <div class="window"><span class="cloud c1"></span><span class="cloud c2"></span></div>
+        <div class="plant">🌿</div>
+        <div class="cat-bed">🛏️</div>
+        <div class="toy-ball">🧶</div>
+        
+<div class="cat-wrap" id="ninaCat" role="img" aria-label="Nina, uma gatinha preta e branca de olhos verdes">
+    <div class="tail"></div>
+    <div class="cat">
+        <div class="ear ear-left"><span></span></div>
+        <div class="ear ear-right"><span></span></div>
+        <div class="face">
+            <div class="patch"></div>
+            <div class="eye eye-left"><i></i></div>
+            <div class="eye eye-right"><i></i></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+            <div class="whiskers whiskers-left"></div>
+            <div class="whiskers whiskers-right"></div>
+        </div>
+        <div class="body">
+            <div class="heart-mark">♥</div>
+            <div class="paw paw-left"></div>
+            <div class="paw paw-right"></div>
+        </div>
+    </div>
+    <div class="speech" id="speech">Miau! 💚</div>
+</div>
+
+        <div class="actions">
+            <button type="button" data-action="feed">🐟<span>Alimentar</span></button>
+            <button type="button" data-action="clean">🫧<span>Limpar</span></button>
+            <button type="button" data-action="sleep">🌙<span>Dormir</span></button>
+            <button type="button" data-action="play">🧶<span>Brincar</span></button>
+            <button type="button" data-action="pet">💗<span>Carinho</span></button>
+        </div>
+    </div>
+
+    <aside class="status-panel">
+        <div class="panel-title">
+            <div><p>Seu bichinho</p><h1>Nina</h1></div>
+            <span class="mood-badge" data-mood>Feliz 😺</span>
+        </div>
+        <div class="status-list">
+            <div class="status-row"><div class="status-label"><span>🍗 Fome</span><b data-value="hunger">78%</b></div><div class="progress"><i data-bar="hunger"></i></div></div>
+            <div class="status-row"><div class="status-label"><span>🫧 Higiene</span><b data-value="hygiene">70%</b></div><div class="progress"><i data-bar="hygiene"></i></div></div>
+            <div class="status-row"><div class="status-label"><span>🌙 Energia</span><b data-value="energy">82%</b></div><div class="progress"><i data-bar="energy"></i></div></div>
+            <div class="status-row"><div class="status-label"><span>🧶 Diversão</span><b data-value="fun">75%</b></div><div class="progress"><i data-bar="fun"></i></div></div>
+            <div class="status-row"><div class="status-label"><span>💗 Amor</span><b data-value="love">88%</b></div><div class="progress"><i data-bar="love"></i></div></div>
+        </div>
+        <div class="xp-box">
+            <div><span>Experiência</span><b><span data-xp>0</span>/100 XP</b></div>
+            <div class="progress xp"><i data-xp-bar></i></div>
+        </div>
+        <div class="daily-card">
+            <span>🎁 Recompensa diária</span>
+            <button type="button" id="dailyReward">Resgatar 50 moedas</button>
+        </div>
+        <p class="install-note">O progresso fica salvo neste aparelho.</p>
+    </aside>
+</section>    </main>
+</div>
+
+<nav class="mobile-tabs" aria-label="Navegação móvel">
+    <a data-route="inicio" href="index.html">🏠<span>Início</span></a>
+    <a data-route="cozinha" href="cozinha.html">🍽️<span>Cozinha</span></a>
+    <a data-route="quarto" href="quarto.html">🛏️<span>Quarto</span></a>
+    <a data-route="banheiro" href="banheiro.html">🛁<span>Banho</span></a>
+    <a data-route="jogo" href="jogo.html">🎮<span>Jogo</span></a>
+    <a data-route="loja" href="loja.html">🛍️<span>Loja</span></a>
+</nav>
+
+<div id="toast" class="toast" aria-live="polite"></div>
+<script src="assets/js/game.js"></script>
+</body>
+</html>
